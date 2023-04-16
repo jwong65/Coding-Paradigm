@@ -33,3 +33,10 @@ class AnakinsPod(Podracer):
 
 
 # Define another class that inherits Podracer and call this one SebulbasPod. This class should have a special method called flame_jet that will update the condition of another podracer to "trashed".
+
+class SebulbasPod(AnakinsPod):
+    def __init__(self, max_speed, condition, price):
+        super().__init__(max_speed, condition, price)
+
+    def flame_jet(self):
+        self.condition = 'trashed'
